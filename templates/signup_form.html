@@ -3,44 +3,43 @@
     <h1>Signup</h1>
     <div>
         <form action="/login" method='POST'>
-        <span>
+        <div>
             <label for="username">Username</label>
-        </span>
-        <span>
+        </div>
+        <div>
             <input name="username" type="text" value={{username}}>
-            <p class="error">{{username_error}}</p>
-        </span>
-        <br>
-        <span>
+            <h4 class="error">{{username_error}}</h4>
+        </div>
+        <div>
             <label for="password">Password</label>
-        </span>
-        <span>
+        </div>
+        <div>
             <input name="password" type="password" value={{password}}>
-            <p class="error">{{password_error}}</p>
-        </span>
-        <br>
-        <span>
+            <h4 class="error">{{password_error}}</h4>
+        </div>
+        
+        <div>
             <label for="verify_password">Verify Password</label>
-        </span>
-        <span>
+        </div>
+        <div>
             <input name="verify_password" type="password" value={{verify_password}}>
-            <p class="error">{{verify_password_error}}</p>
-        </span>
-        <br>
-        <span>
+            <h4 class="error">{{verify_password_error}}</h4>
+        </div>
+        
+        <div>
             <label for="email">Email (optional)</label>
-        </span>
-        <span>
+        </div>
+        <div>
             <input name="email" type="text" value={{email}}>
-            <p class="error">{{email_error}}</p>
-        </span>
-        <span>
-            <p class="error">{{blank_error}}</p>
-        </span>
-        <br>
-        <span>
+            <h4 class="error">{{email_error}}</h4>
+        </div>
+        <div>
+            <h4 class="error">{{blank_error}}</h4>
+        </div>
+        
+        <div>
             <input type="submit" value="Submit" />
-        </span>
+        </div>
         </form>
     </div>
 {% endblock %}
