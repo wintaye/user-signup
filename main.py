@@ -52,7 +52,7 @@ def main():
 
         if not email_error and not password_error and not verify_password_error and not blank_error:
             username = request.form['username']
-            return redirect('/welcome?username{0}'.format(username))
+            return redirect('/welcome?{0}'.format(username))
 
         else: 
             template = jinja_env.get_template('signup_form.html')
@@ -60,7 +60,7 @@ def main():
 
 @app.route("/welcome", methods=['GET'])
 def valid_request():
-    username = request.args.get['username']
+    username = request.args.get('username')
     template = jinja_env.get_template('welcome.html')
     return template.render(username=username)
 
